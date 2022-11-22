@@ -1,38 +1,38 @@
-<!-- <table>
-
+<table>
 
     <tr>
-        <td>Kode</td>
+        <td>Nama Siswa</td>
         <td>
-            {{$barang->kode}}
+            {{$siswa->nama}}
         </td>
     </tr>
 
     <tr>
-        <td>Nama Barang</td>
+        <td>Alamat</td>
         <td>
-            {{$barang->nama}}
+            {{$siswa->alamat}}
         </td>
     </tr>
 
     <tr>
-        <td>Tempat</td>
+        <td>Jenis Kelamin</td>
         <td>
-            {{$barang->tempat->nama}}
+            {{$siswa->jenis_kelamin}}
         </td>
     </tr>
 
     <tr>
-        <td>Stok</td>
+        <td>Kelas</td>
         <td>
-            {{$barang->stok}}
+            {{$siswa->kelas_id}}
         </td>
     </tr>
 
     <tr>
-        <td>Keterangan</td>
+        <td>Jurusan</td>
         <td>
-            {{$barang->keterangan}}
+            {{$siswa->jurusan_id}}
         </td>
     </tr>
-</table> -->
+    
+</table>

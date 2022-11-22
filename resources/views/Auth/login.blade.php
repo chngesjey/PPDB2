@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset ('assets/css/login.css')}}">
 <link rel="stylesheet" href="{{asset ('assets/css/button.css')}}">
 
-<title>Login CAK</title>
+<title>Login</title>
 <div class="container" id="container">
 	<!-- Form Regis -->
 	<div class="form-container sign-up-container">
@@ -31,7 +31,7 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div> -->
 			<span>or use your account</span>
-			<input id="email" name="email" type="email" placeholder="Email" />
+			<input id="email" name="email" autocomplete="off" type="email" placeholder="Email" />
 			<input id="password" name="password" type="password" placeholder="Password" />
 			<!-- <a href="#">Forgot your password?</a> -->
 			<button>Sign In</button>
