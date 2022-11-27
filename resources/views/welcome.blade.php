@@ -248,7 +248,6 @@
             <!-- Jurusan Pertama -->
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
-                    <a href="#">
                         <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                             <div class="hidden-content">
                                 <h4>Jurusan Baku Hantam</h4>
@@ -263,7 +262,6 @@
 
                 <!-- Jurusan Kedua -->
                 <div class="col-lg-3 col-sm-6">
-                    <a href="#">
                         <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
                             <div class="hidden-content">
                                 <h4>Jurusan Tata Boga</h4>
@@ -278,7 +276,6 @@
 
                 <!-- Jurusan Ketiga -->
                 <div class="col-lg-3 col-sm-6">
-                    <a href="#">
                         <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                             <div class="hidden-content">
                                 <h4>Jurusan Kecantikan</h4>
@@ -293,7 +290,6 @@
 
                 <!-- Jurusan Keempat -->
                 <div class="col-lg-3 col-sm-6">
-                    <a href="#">
                         <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                             <div class="hidden-content">
                                 <h4>Jurusan Roblox</h4>

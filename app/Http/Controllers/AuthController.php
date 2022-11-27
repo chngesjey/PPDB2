@@ -34,8 +34,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'remember_token' => Str::random(20),
-            'role' => 'admin'
+            'remember_token' => Str::random(20),    
         ]);
 
         return view('auth.login');

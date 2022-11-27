@@ -14,9 +14,9 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div> -->
 			<span>or use your email for registration</span>
-			<input id="name" name="name" autocomplete="off" type="text" placeholder="Name" />
-			<input id="email" name="email" autocomplete="off" type="email" placeholder="Email" />
-			<input id="password" name="password" type="password" placeholder="Password" />
+			<input id="name" name="name" autocomplete="off" type="text" placeholder="Name" required/>
+			<input id="email" name="email" autocomplete="off" type="email" placeholder="Email" required/>
+			<input id="password" name="password" type="password" placeholder="Password" required/>
 			<button>Sign Up</button>
 		</form>
 	</div>
@@ -32,8 +32,8 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div> -->
 			<span>or use your account</span>
-			<input id="email" name="email" autocomplete="off" type="email" placeholder="Email" />
-			<input id="password" name="password" type="password" placeholder="Password" />
+			<input id="email" name="email" autocomplete="off" type="email" placeholder="Email" required/>
+			<input id="password" name="password" type="password" placeholder="Password" required/>
 			<!-- <a href="#">Forgot your password?</a> -->
 			<button>Sign In</button>
 		</form>
