@@ -25,9 +25,9 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('auth.register');
+        return view('Auth.login');
     }
-
+    
     public function simpanRegister(Request $request)
     {
         User::create([
@@ -35,6 +35,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'remember_token' => Str::random(20),
+            'role' => 'admin'
         ]);
 
         return view('auth.login');

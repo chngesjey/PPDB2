@@ -48,7 +48,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="/" class="logo">
                             <h4>SMK<span>Parakacuk</span></h4>
                         </a>
                         <!-- ***** Logo End ***** -->
