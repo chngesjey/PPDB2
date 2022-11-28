@@ -21,8 +21,7 @@ class UserTableSeeder extends Seeder
             'name' => 'Anandito',
             'email' => 'anandito@admin',
             'password' => bcrypt('12345678'),
-            'remember_token' => Str::random(20),
-            'role' => 'admin'
+            'role_id' => '1'
         ]);
     }
 }

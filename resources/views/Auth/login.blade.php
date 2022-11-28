@@ -22,8 +22,14 @@
 	</div>
 
 	<!-- Form Login -->
+	@if (session('status'))
+		<div class="alert alert-danger">
+			{{session('status')}}
+		</div>
+	@endif
+
 	<div class="form-container sign-in-container">
-		<form method="POST" action="/postlogin">
+		<form method="POST" action="{{route ('postlogin')}}">
 			@csrf
 			<h1>Sign in</h1>
 			<!-- <div class="social-container">
