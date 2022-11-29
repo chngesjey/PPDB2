@@ -27,10 +27,10 @@
 </div>
 
   <!-- Add Email -->
-  <div class="my-1">
+  <!-- <div class="my-1">
     <label class="mb-2" for="email">Email</label>
     <input type="email" name="email" id="email" value="{{ old('email')}}" class="form-control">
-  </div>
+  </div> -->
 
   <!-- Add Telepon -->
   <!-- Add Jenis Kelamin -->
