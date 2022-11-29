@@ -1,5 +1,4 @@
-@if($user->role == 'admin')
-        <div class="main-sidebar sidebar-style-2">
+<div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
                         <a href="{{route('dashboard')}}" class="text-white">Pendaftaran</a>
@@ -15,52 +14,47 @@
                                 <span>Dashboard</span>
                             </a>
                         </li>
-                        @endif
-                        
-                        <li class="menu-header">Master</li>
 
-                        @if($user->role == 'siswa')
-                        <li class="{{ request()->is('siswa*') ? 'active' : ''}}">
-                            <a href="{{route('siswa.index')}}" class="text-white">
-                                <i class="fas fa-boxes"></i>
-                                <span>Siswa</span>
-                            </a>
-                        </li>
-                        @endif
+            <li class="menu-header">Master</li>
+            
+            <li class="{{ request()->is('siswa') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('siswa.index') }}">
+                    <i class="fas fa-users"></i>
+                    <span>Siswa</span>
+                </a>
+            </li>
+            <li class="{{ request()->is('jurusan') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('jurusan.index') }}">
+                    <i class="fas fa-book"></i>
+                    <span>Jurusan</span>
+                </a>
+            </li>
 
-                        @if($user->role == 'admin')
-                        <li class="{{ request()->is('kelas*') ? 'active' : ''}}">
-                            <a href="{{ route('kelas.index') }}" class="text-white">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Kelas</span>
-                            </a>
-                        </li>
-                        @endif
 
-                        @if($user->role == 'admin')
-                        <li class="{{ request()->is('jurusan*') ? 'active' : ''}}">
-                            <a href="{{ route('jurusan.index') }}" class="text-white">
-                                <i class="fas fa-list"></i>
-                                <span>Jurusan</span>
-                            </a>
-                        </li>
-                        @endif
+            <li class="menu-header">Setting</li>
 
-                        <li class="menu-header">Setting</li>
+            <li class="{{ request()->is('user') ? 'active' : '' }}">
+                <a class="nav-link" href="/user">
+                    <i class="fas fa-user"></i>
+                    <span>User</span>
+                </a>
+            </li>
+        </ul>
+    
+        <ul class="sidebar-menu">
+            <li class="menu-header">Main</li>
 
-                        <li class="{{ request()->is('user*') ? 'active' : ''}}">
-                            <a href="#" class="text-white">
-                                <i class="fas fa-boxes"></i>
-                                <span>User</span>
-                            </a>
-                        </li>
+            <li class="{{ request()->is('profile') ? 'active' : '' }}">
+                <a class="nav-link" href="/profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+        </ul>
+      
+    </aside>
+</div>
 
-                        <li class="{{ request()->is('setting*') ? 'active' : ''}}">
-                            <a href="#" class="text-white">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Setting</span>
-                            </a>
-                        </li>
-                        
-                </aside>
-            </div>
+
+
+</div>

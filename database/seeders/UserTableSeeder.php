@@ -18,10 +18,21 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Anandito',
-            'email' => 'anandito@admin',
-            'password' => bcrypt('12345678'),
-            'role_id' => '1'
+            'role_id' => 1,
+            'name' => 'Admin',
+            'email' => 'admin@ppdb.com',
+            'password' => bcrypt('admin'),
+            'remember_token' => Str::random(20),
+            'status' => 'active'
+        ]);
+
+        DB::table('users')->insert([
+            'role_id' => 2,
+            'name' => 'jojo',
+            'email' => 'jojo@gmail.com',
+            'password' => bcrypt('jojo'),
+            'remember_token' => Str::random(20),
+            'status' => 'inactive'
         ]);
     }
 }

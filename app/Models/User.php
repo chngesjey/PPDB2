@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role_id',
+        'role',
     ];
 
     /**
@@ -31,7 +31,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 
-        'role_id', 
+        'role', 
         'remember_token',
     ];
 
@@ -45,6 +45,6 @@ class User extends Authenticatable
     ];
 
     protected $attributes = [
-        'role_id' => '2'
+        'role' => 'siswa'
     ];
 }

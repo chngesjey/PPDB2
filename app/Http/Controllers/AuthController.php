@@ -1,44 +1,46 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facedes\Session;
 use App\Models\User;
+use App\Models\Siswa;
+use App\Models\Jurusan;
 use Auth;
-use DB;
-use Str;
 
 class AuthController extends Controller
 {
     public function login()
     {
-        return view('auth.login');
+        return view('Auth.login');
     }
-
     public function postlogin(Request $request)
     {
-        $kredentials = $request->validate([
-            'email' => ['required'],
-            'password' => ['required'],
+        $credentials = $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ],
+        [
+            'email.required' => 'Email harus di isi',
+            'password.required' => 'Password harus di isi'
         ]);
-        // cek apakah Login Valid
-        if(Auth::attempt($kredentials)) {
-            // cek apakah user status = active
-            if(Auth::user()->status != 'active') {
-                Session::flash('status', 'failed');
-                Session::flash('message', 'Your Account is Not Active Yet. Please Contact Admin :)');
-                return redirect('/login');
+
+        $request->session()->regenerate();
+        if(Auth::attempt($credentials)){
+            if(Auth::user()->role_id == 1){
+                return redirect('/dashboard');
             }
-            Session::flash('status', 'failed');
-            Session::flash('message', 'Login Invalid');
-            return redirect('/login');
+            if(Auth::user()->role_id == 2){
+                return redirect('/profile');
+            }
         }
+        return redirect('/login');
     }
 
-    public function register()
+     public function register()
     {
-        return view('auth.login');
+        $jurusan = Jurusan::all();
+
+        return view('auth.register', compact('jurusan'));
     }
     
     public function simpanRegister(Request $request)
@@ -46,7 +48,7 @@ class AuthController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password), 
+            'password' => bcrypt($request->password),
         ]);
 
         return view('auth.login');
@@ -55,6 +57,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout(); 
-        return redirect('/login');
+        return redirect('/');
     }
 }
