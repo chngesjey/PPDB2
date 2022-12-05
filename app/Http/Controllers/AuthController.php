@@ -13,6 +13,7 @@ class AuthController extends Controller
     {
         return view('Auth.login');
     }
+    
     public function postlogin(Request $request)
     {
         $credentials = $request->validate([
@@ -45,9 +46,9 @@ class AuthController extends Controller
     
     public function simpanRegister(Request $request)
     {
+
         User::create([
             'role_id' => 2,
-            'status' => 'inactive',
             'name' => $request->nama,
             'jurusan_id' => $request->jurusan_id,
             'jenis_kelamin' => $request->jenis_kelamin,

@@ -33,7 +33,7 @@
                         <form action="{{route('simpanRegister')}}" method="POST">
                             @csrf
                             <label for="nama">Username</label>
-                            <input id="nama" type="text" class="form-control" name="nama" autocomplete="off" autofocus>
+                            <input id="nama" type="text" class="form-control" name="nama" autocomplete="off" autofocus required>
                         </div>
                     <!-- <div class="form-group col-6">
                       <label for="last_name">Last Name</label>
@@ -43,7 +43,7 @@
 
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email">
+                    <input id="email" type="email" class="form-control" name="email" required>
                     <div class="invalid-feedback">
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                   
                     <div class="form-group">
                       <label for="password" class="d-block">Password</label>
-                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
+                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password" required>
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
@@ -62,7 +62,7 @@
                             <div class="col-12 col-lg-6 col-md-6">
                                 <div class="my-1">
                                     <label class="mb-2" for="nisn">NISN</label>
-                                    <input type="text" name="nisn" id="nisn" value="{{ old('nisn')}}" class="form-control">
+                                    <input type="text" name="nisn" id="nisn" value="{{ old('nisn')}}" class="form-control" required>
                                 </div>
                             </div>
 
@@ -70,7 +70,7 @@
                                 <div class="my-1">
                                     <label class="mb-2" for="jurusan_id">Jurusan</label>
                                     <br>
-                                    <select name="jurusan_id" id="jurusan_id" value="{{ old('jurusan_id')}}" class="form-control">
+                                    <select name="jurusan_id" id="jurusan_id" value="{{ old('jurusan_id')}}" class="form-control" required>
                                         <option selected>Pilih...</option>
                                         @foreach($jurusan as $jurusan)
                                             <option value="{{$jurusan->id}}">{{$jurusan->nama}}</option>
@@ -84,7 +84,7 @@
                             <div class="col-12 col-lg-6 col-md-6">
                                 <div class="my-1">
                                     <label class="mb-2" for="telepon">Telepon</label>
-                                    <input type="text" name="telepon" id="telepon" value="{{ old('telepon')}}" class="form-control">
+                                    <input type="text" name="telepon" id="telepon" value="{{ old('telepon')}}" class="form-control" required>
                                 </div>
                             </div>
                   
@@ -93,7 +93,7 @@
                                 <div class="my-1">
                                     <label class="mb-2" for="jenis_kelamin">Jenis Kelamin</label>
                                     <br>
-                                    <select name="jenis_kelamin" id="jenis_kelamin" value="{{ old('jenis_kelamin')}}" class="form-control">
+                                    <select name="jenis_kelamin" id="jenis_kelamin" value="{{ old('jenis_kelamin')}}" class="form-control" required>
                                         <option selected>Pilih...</option>
                                         <option value="Laki-laki"> Laki-Laki</option>
                                         <option value="Perempuan"> Perempuan</option>
@@ -106,7 +106,7 @@
                             <div class="col-12 col-lg-6 col-md-6">
                                 <div class="">
                                     <label class="mb-2" for="agama">Agama</label>
-                                    <input type="text" name="agama" id="agama" value="{{ old('agama')}}" class="form-control">
+                                    <input type="text" name="agama" id="agama" value="{{ old('agama')}}" class="form-control" required>
                                 </div>
                             </div>
 
@@ -114,7 +114,7 @@
                             <div class="col-12 col-lg-6 col-md-6">
                               <div class="">
                                     <label class="mb-2" for="tempat_lahir">Tempat Lahir</label>
-                                    <input type="text" name="tempat_lahir" id="tempat_lahir" value="{{ old('tempat_lahir')}}" class="form-control">
+                                    <input type="text" name="tempat_lahir" id="tempat_lahir" value="{{ old('tempat_lahir')}}" class="form-control" required>
                                 </div>
                               </div>
                             </div>
@@ -123,7 +123,7 @@
                             <div class="col-12">
                                 <div class="">
                                     <label class="mb-2" for="tanggal_lahir">Tanggal Lahir</label>
-                                    <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir')}}" class="form-control">
+                                    <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir')}}" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -132,14 +132,14 @@
                             <div class="col-12 col-lg-6 col-md-6">
                                 <div class="my-1">
                                     <label class="mb-2" for="alamat">Alamat</label>
-                                    <textarea class="form-control"  id="alamat" name="alamat" placeholder="..."></textarea>
+                                    <textarea class="form-control"  id="alamat" name="alamat" placeholder="..." required></textarea>
                                 </div>
                             </div>
 
                             <div class="col-12 col-lg-6 col-md-6">
                                 <div class="my-1">
                                     <label class="mb-2" for="asal_sekolah">Asal Sekolah</label>
-                                    <textarea class="form-control"  id="asal_sekolah" name="asal_sekolah" placeholder="..."></textarea>
+                                    <textarea class="form-control"  id="asal_sekolah" name="asal_sekolah" placeholder="..." required></textarea>
                                 </div>
                             </div>
                         </div>
