@@ -36,7 +36,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     
     //Siswa
     Route::get('/siswa/data', [SiswaController::class, 'data'])->name('siswa.data');
-    Route::get('/siswa/pdf', [SiswaController::class, 'data'])->name('siswa.pdf');
+    Route::get('/siswa/pdf/{id}', [SiswaController::class, 'pdf'])->name('siswa.pdf');
+    Route::get('/siswa/all', [SiswaController::class, 'all'])->name('all.pdf');
+
     Route::resource('/siswa', SiswaController::class);
     
     //Profile

@@ -7,6 +7,7 @@ use App\Models\Jurusan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Validator;
+use PDF;
 use Str;
 class SiswaController extends Controller
 {
@@ -39,6 +40,7 @@ class SiswaController extends Controller
                 <div class="btn-group">
                     <button onclick="editData(`' .route('siswa.update', $siswa->id). '`)" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></button>
                     <button onclick="deleteData(`' .route('siswa.destroy', $siswa->id). '`)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                    <a href="' .route('siswa.pdf', $siswa->id). '" target="_blank" class="btn btn-success btn-sm"><i class="fa fa-print"></i></a>
                 </div>
 
                 ';
@@ -139,6 +141,14 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::find($id);
         return view('siswa.form', compact('siswa'));
+    }
+
+    public function pdf($id)
+    {
+        $siswa = Siswa::find($id);
+
+        $pdf =  PDF::loadview('siswa.pdf', compact('siswa'));
+        return $pdf->stream('siswa.pdf');
     }
 
     /**

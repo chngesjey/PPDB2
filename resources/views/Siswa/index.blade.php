@@ -25,6 +25,9 @@
                             <button type="button" onclick="addForm('{{ route('siswa.store') }}')" class="btn btn-primary shadow-sm rounded-pill">
                                     <i class="fa fa-plus"></i> Tambah
                             </button>
+                            <button type="button" onclick="pdf('{{ route('all.pdf') }}')" class="btn btn-success shadow-sm rounded-pill">
+                                    <i class="fa fa-print"></i> Print
+                            </button>
                         </div>
                     </div>
 
@@ -112,6 +115,10 @@
 
             $('#modalForm form').attr('action', url);
             $('#modalForm [name=_method]').val('post');
+        }
+
+        function pdf(url){
+        $('.form-siswa').attr('action', url).attr('target', '_blank').submit();
         }
 
         function editData(url){
