@@ -21,7 +21,7 @@ Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin
 
 //Register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/simpanRegister', [AuthController::class, 'postRegister'])->name('simpanRegister');
+Route::post('/simpanRegister', [AuthController::class, 'simpanRegister'])->name('simpanRegister');
 
 //Logout
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

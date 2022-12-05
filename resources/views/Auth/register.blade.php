@@ -110,15 +110,17 @@
                                 </div>
                             </div>
 
-                            <div class="">
+                            
                             <div class="col-12 col-lg-6 col-md-6">
+                              <div class="">
                                     <label class="mb-2" for="tempat_lahir">Tempat Lahir</label>
                                     <input type="text" name="tempat_lahir" id="tempat_lahir" value="{{ old('tempat_lahir')}}" class="form-control">
                                 </div>
+                              </div>
                             </div>
 
-                            
-                            <div class="col-12 col-lg-6 col-md-6">
+                            <div class="row my-1">
+                            <div class="col-12">
                                 <div class="">
                                     <label class="mb-2" for="tanggal_lahir">Tanggal Lahir</label>
                                     <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="{{ old('tanggal_lahir')}}" class="form-control">

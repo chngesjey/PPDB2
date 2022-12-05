@@ -25,9 +25,6 @@
                             <button type="button" onclick="addForm('{{ route('siswa.store') }}')" class="btn btn-primary shadow-sm rounded-pill">
                                     <i class="fa fa-plus"></i> Tambah
                             </button>
-                            <button type="button" onclick="pdf('{{ route('all.pdf') }}')" class="btn btn-success shadow-sm rounded-pill">
-                                    <i class="fa fa-print"></i> Print
-                            </button>
                         </div>
                     </div>
 

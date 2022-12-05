@@ -46,8 +46,18 @@ class AuthController extends Controller
     public function simpanRegister(Request $request)
     {
         User::create([
+            'role_id'=> $request->role_id,
             'name' => $request->name,
+            'jurusan_id' => $request->jurusan_id,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'agama' => $request->agama,
             'email' => $request->email,
+            'telepon' => $request->telepon,
+            'nisn' => $request->nisn,
+            'tempat_lahir' => $request->tempat_lahir,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'alamat' => $request->alamat,
+            'asal_sekolah' => $request->asal_sekolah,
             'password' => bcrypt($request->password),
         ]);
 

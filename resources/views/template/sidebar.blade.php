@@ -6,6 +6,8 @@
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="{{route('dashboard')}}" class="text-white">PPDB</a>
                     </div>
+
+                    @if(auth()->user()->role_id == '1')
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
                         <li class="{{ request()->is('dashboard*') ? 'active' : ''}}">
@@ -40,18 +42,31 @@
                 </a>
             </li>
         </ul>
-    
+        @endif
+
+        @if(auth()->user()->role_id == '2')
         <ul class="sidebar-menu">
             <li class="menu-header">Main</li>
 
             <li class="{{ request()->is('profile') ? 'active' : '' }}">
                 <a class="nav-link" href="/profile">
                     <i class="fas fa-user"></i>
-                    <span>Profil</span>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li class="menu-header">Setting</li>
+            
+            <li class="{{ request()->is('user') ? 'active' : '' }}">
+                <a class="nav-link" href="/user">
+                    <i class="fas fa-user"></i>
+                    <span>User</span>
                 </a>
             </li>
         </ul>
-      
+
+        
+      @endif
     </aside>
 </div>
 

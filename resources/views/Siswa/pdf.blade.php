@@ -6,14 +6,14 @@
             {{$siswa->nama}}
         </td>
     </tr>
-
+    
     <tr>
-        <td>Alamat</td>
+        <td>Jurusan</td>
         <td>
-            {{$siswa->alamat}}
+            {{$siswa->jurusan_id}}
         </td>
     </tr>
-
+    
     <tr>
         <td>Jenis Kelamin</td>
         <td>
@@ -22,17 +22,26 @@
     </tr>
 
     <tr>
-        <td>Kelas</td>
+        <td>Email</td>
         <td>
-            {{$siswa->kelas_id}}
+            {{$siswa->email}}
         </td>
     </tr>
 
     <tr>
-        <td>Jurusan</td>
+        <td>NISN</td>
         <td>
-            {{$siswa->jurusan_id}}
+            {{$siswa->nisn}}
         </td>
     </tr>
+
+    <tr>
+        <td>Alamat</td>
+        <td>
+            {{$siswa->alamat}}
+        </td>
+    </tr>
+
+
     
 </table>

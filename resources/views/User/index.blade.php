@@ -34,7 +34,7 @@
                                     <td scope="col">Email</td>
                                     <td scope="col">NISN</td>
                                     <td scope="col">Alamat</td>
-                                    <td scope="col" style="width: 84px;">Aksi</td>
+                                    <!-- <td scope="col" style="width: 84px;">Aksi</td> -->
                                 </tr>
                             </thead>
                         </table>
@@ -68,7 +68,7 @@
                     {data: 'email'},
                     {data: 'nisn'},
                     {data: 'alamat'},
-                    {data: 'aksi'}
+                    
                 ]
             });
         })
