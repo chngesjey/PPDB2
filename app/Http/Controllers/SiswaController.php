@@ -186,7 +186,9 @@ class SiswaController extends Controller
     public function destroy($id)
     {
         $siswa = Siswa::find($id);
+        $user = User::find($id+1);
         $siswa->delete();
+        $user->delete();
 
         return redirect('siswa');
     }
