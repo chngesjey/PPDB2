@@ -11,7 +11,7 @@
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dashboard</li>
                         <li class="{{ request()->is('dashboard*') ? 'active' : ''}}">
-                            <a href="{{ route('dashboard')}}" class="text-white">
+                            <a href="{{ route('dashboard')}}" class="">
                                 <i class="fas fa-fire"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -56,7 +56,7 @@
             </li>
 
             <li class="menu-header">Setting</li>
-            
+
             <li class="{{ request()->is('user') ? 'active' : '' }}">
                 <a class="nav-link" href="/user">
                     <i class="fas fa-user"></i>

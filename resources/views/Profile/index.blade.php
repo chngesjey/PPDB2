@@ -23,9 +23,9 @@
                             <p class="text-muted mb-1">Full Stack Developer</p>
                             <p class="text-muted">Bay Area, San Francisco, CA</p>
 
-                            <button type="button" onclick="#" class="btn btn-tool btn-primary shadow-sm rounded-pill" style="width: 120px;">
+                            <!-- <button type="button" onclick="#" class="btn btn-tool btn-primary shadow-sm rounded-pill" style="width: 120px;">
                                 Edit Profil
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>

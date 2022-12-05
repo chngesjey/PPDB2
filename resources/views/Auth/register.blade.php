@@ -32,8 +32,8 @@
                   <div class="form-group">
                         <form action="{{route('simpanRegister')}}" method="POST">
                             @csrf
-                            <label for="name">Username</label>
-                            <input id="name" type="text" class="form-control" name="nama" autocomplete="off" autofocus>
+                            <label for="nama">Username</label>
+                            <input id="nama" type="text" class="form-control" name="nama" autocomplete="off" autofocus>
                         </div>
                     <!-- <div class="form-group col-6">
                       <label for="last_name">Last Name</label>
