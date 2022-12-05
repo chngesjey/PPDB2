@@ -37,7 +37,7 @@
                     <h4>Siswa</h4>
                   </div>
                   <div class="card-body">
-                    
+                  {{ $siswa->count() }} 
                   </div>
                 </div>
               </div>
