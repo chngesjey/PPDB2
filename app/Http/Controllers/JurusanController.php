@@ -39,7 +39,7 @@ class JurusanController extends Controller
     }
 
     /**
-	@@ -24,7 +48,7 @@ public function index()
+
      */
     public function create()
     {
@@ -47,7 +47,7 @@ class JurusanController extends Controller
     }
 
     /**
-	@@ -35,7 +59,23 @@ public function create()
+
      */
     public function store(Request $request)
     {

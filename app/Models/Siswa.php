@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Jurusan;
 use App\Models\Kelas;
+use App\Models\User;
 
 class Siswa extends Model
 {
@@ -21,6 +22,9 @@ class Siswa extends Model
 
     public function Kelas(){
         return $this->belongsTo(Kelas::class);
+    }
+    public function User(){
+        return $this->belongsTo(User::class);
     }
     
 }

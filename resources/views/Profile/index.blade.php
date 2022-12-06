@@ -19,9 +19,9 @@
                         <div class="card-body text-center">
                             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                                 alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
-                            <h5 class="my-3">John Smith</h5>
-                            <p class="text-muted mb-1">Full Stack Developer</p>
-                            <p class="text-muted">Bay Area, San Francisco, CA</p>
+                            <h5 class="my-3">{{Auth()->user()->name}}</h5>
+                            <p class="text-muted mb-1"></p>
+                            <p class="text-muted"></p>
 
                             <!-- <button type="button" onclick="#" class="btn btn-tool btn-primary shadow-sm rounded-pill" style="width: 120px;">
                                 Edit Profil
@@ -61,7 +61,7 @@
                                     <p class="mb-0">Jenis Kelamin</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Laki-laki</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->jenis_kelamin}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -72,7 +72,7 @@
                                     <p class="mb-0">Agama</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Islam</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->agama}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -83,7 +83,7 @@
                                     <p class="mb-0">Email</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">example@example.com</p>
+                                    <p class="text-muted mb-0">{{Auth()->user()->email}}</p>
                                 </div>
                             </div>
 
@@ -94,7 +94,7 @@
                                     <p class="mb-0">Phone</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">(097) 234-5678</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->telepon}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -105,7 +105,7 @@
                                     <p class="mb-0">NISN</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">12345</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->nisn}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -116,7 +116,7 @@
                                     <p class="mb-0">Tempat Lahir</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Sidoarjo</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->tempat_lahir}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -127,7 +127,7 @@
                                     <p class="mb-0">Taggal Lahir</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">23-2-2005</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->tanggal_lahir}} @endforeach</p>
                                 </div>
                             </div>
 
@@ -138,7 +138,7 @@
                                     <p class="mb-0">Alamat</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                    <p class="text-muted mb-0">@foreach($profile as $p) {{$p->alamat}} @endforeach</p>
                                 </div>
                             </div>
 

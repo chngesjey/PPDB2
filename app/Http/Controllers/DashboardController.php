@@ -13,9 +13,8 @@ class DashboardController extends Controller
    public function index()
    {
       $siswa = Siswa::all();
-      $kelas = Kelas::all();
       $jurusan = Jurusan::all();
       $user = User::all();
-      return view('dashboard.index', compact('user', 'siswa', 'kelas', 'jurusan'));
+      return view('dashboard.index', compact('user', 'siswa', 'jurusan'));
    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -14,7 +15,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('Profile.index');
+       $findid =  Auth()->user()->id;
+       $profile = Siswa::with('user')->where('user_id', $findid)->get();
+    //    return $profile;
+        return view('Profile.index', compact('profile'));
     }
 
     /**
