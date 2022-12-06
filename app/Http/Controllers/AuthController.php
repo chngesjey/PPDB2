@@ -52,6 +52,16 @@ class AuthController extends Controller
     public function simpanRegister(Request $request)
     {
 
+        // $user = new User;
+        // $user->name = $request->nama;
+        // $user->password = bcrypt('12345678');
+        // $user->remember_token = Str::random(20);
+        // $user->email = $request->email;
+        // $user->role_id = 2;
+        // $user->status = 'inactive';
+        // $user->save();
+
+
         $user = User::create([
             'role_id' => 2,
             'name' => $request->nama,
@@ -77,19 +87,7 @@ class AuthController extends Controller
 
         //membuat table siswa
         $request->request->add(['user_id' => $user->id]);
-        $siswa = Siswa::create([
-            'nama' => $request->nama,
-            'jurusan_id' => $request->jurusan_id,
-            'jenis_kelamin' => $request->jenis_kelamin,
-            'agama' => $request->agama,
-            'email' => $request->email,
-            'telepon' => $request->telepon,
-            'nisn' => $request->nisn,
-            'tempat_lahir' => $request->tempat_lahir,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'alamat' => $request->alamat,
-            'asal_sekolah' => $request->asal_sekolah,
-        ]);
+        $siswa = Siswa::create($request->all());
 
         if($validator->fails()){
             return response()->json($validator->errors(), 422);

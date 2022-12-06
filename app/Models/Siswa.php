@@ -14,7 +14,22 @@ class Siswa extends Model
 
     protected $table = 'siswa';
 
-    protected $guarded = [];
+    protected $fillable = [
+        'nama',
+            'jurusan_id' ,
+            'jenis_kelamin' ,
+            'agama' ,
+            'email' ,
+            'telepon', 
+            'nisn' ,
+            'tempat_lahir', 
+            'tanggal_lahir',
+            'user_id',     
+            'alamat' ,
+            'asal_sekolah', 
+    ];
+
+    
 
     public function Jurusan(){
         return $this->belongsTo(Jurusan::class);
